@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDiver22F</title>
+    <script src="game_js.js"></script>
+
+    <style>
+
+       #AreaDiGioco{
+        position: relative;
+        background-image: url(/Img/cielo.jpg);
+        width: 58%;
+        height: 776px;
+        float: left;
+        animation: Cielo 10s linear infinite;    
+       }
+
+       #Menù{
+        background-color: greenyellow;
+        width: 42%;
+        height: 776px;
+        float: left;
+       }
+
+       #Personaggio{
+            transform: scale(2);
+            position: absolute;
+            top: 0%;
+            left: 45%;
+       }
+
+       @keyframes Cielo {
+        0% {
+            background-position: 0px 0px; /* Inizia dall'alto */
+        }
+        100% {
+            background-position: 0px -2000px; /* Termina più in basso rispetto all'inizio per far continuare l'effetto di movimento verso l'alto */
+        }
+       }
+
+    </style>
+
+</head>
+<body  onkeypress="Muovi(event)">
+    
+    <div id="AreaDiGioco">
+        <img src="./Img/pg1.gif" id="Personaggio">
+        <!--<img src="./Img/piccionesx.gif" id="piccione" style="position: absolute; left: 500px;">-->
+    </div>
+
+    <div id="Menù">
+
+    </div>
+
+</body>
+</html>
